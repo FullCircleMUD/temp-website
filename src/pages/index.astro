@@ -1,0 +1,115 @@
+---
+import Base from "../layouts/Base.astro";
+
+const PLAY_URL = "https://test.fcmud.world";
+
+const highlights = [
+  {
+    title: "You Own Your Assets",
+    body: "Gold and resources — wheat, iron ore, moonpetal essence — are issued currencies on the XRP Ledger. Every crafted item is an NFT. The ledger is the game's database for ownership, not a side feature.",
+  },
+  {
+    title: "A Real Economy",
+    body: "Farmers harvest wheat, millers grind flour, bakers bake bread. Miners pull ore, smelters refine ingots, blacksmiths forge weapons. NPC markets run on constant-product AMMs, so prices answer to supply and demand rather than a price list.",
+  },
+  {
+    title: "Deep Gameplay First",
+    body: "An expanding roster of races and classes. Over twenty weapon types, each with its own mechanics across five mastery tiers. Six schools of magic whose spells gain new abilities as you advance, not just bigger numbers. Stealth, traps, reactive combat, group tactics.",
+  },
+  {
+    title: "Nothing to Install",
+    body: "A persistent multiplayer world you reach over WebSocket. Play in the browser, or build your own client. No download, no launcher.",
+  },
+];
+---
+
+<Base
+  title="Full Circle MUD — pre-alpha"
+  description="An old-school text MUD with real on-chain item ownership on the XRP Ledger. Now in pre-alpha and open to try at test.fcmud.world."
+>
+  {/* ── Hero ── */}
+  <div class="card mb-4">
+    <div class="card-body text-center py-5">
+      <p class="mb-3"><span class="status-pill">Pre-Alpha</span></p>
+      <h1 class="card-title hero-title mb-3">Full Circle MUD</h1>
+      <p class="lead mb-4">
+        A text-based multiplayer world where every coin, every sword, and every hide of leather is an
+        on-chain asset you own.
+      </p>
+      <p class="mb-0"><a href={PLAY_URL} class="playbutton">Try the pre-alpha</a></p>
+      <p class="text-muted small mt-3 mb-0">Opens <strong>test.fcmud.world</strong></p>
+    </div>
+  </div>
+
+  {/* ── Pre-alpha notice ── */}
+  <div class="alert alert-warning mb-4">
+    <h4 class="mb-3">The game is in pre-alpha</h4>
+    <p>
+      What is running today is our <strong>staging instance</strong>, not the final production game.
+      It lives at <strong>test.fcmud.world</strong>. You are welcome to come in and play it, but
+      please read this first.
+    </p>
+    <p>
+      <strong>There is no import or export of game assets until beta.</strong> Bringing assets in
+      from your own wallet, and taking assets out to it, are both switched off. Anything you earn
+      during pre-alpha stays inside the game.
+    </p>
+    <p class="mb-0">
+      Staging is where we test. Expect rough edges, expect restarts, and expect the world and your
+      character to be wiped when we rebuild. When the game reaches beta, production moves to
+      fcmud.world and asset transfer opens up.
+    </p>
+  </div>
+
+  {/* ── What it is ── */}
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">What it is</h2>
+      <hr />
+      <p>
+        Full Circle MUD is a MUD — a text-driven multiplayer world you play by typing. It takes the
+        genre at its best, rich and imagination-first, and adds two things that were not possible
+        the first time around.
+      </p>
+      <p>
+        The first is real ownership. Gold, resources and crafted items are genuine assets on the
+        XRP Ledger rather than rows in a private database. The second is an AI layer that gives NPCs
+        memory, so the people you meet remember what you did.
+      </p>
+      <p class="mb-0">
+        The name comes from the heritage. It is inspired by CircleMUD, and it brings that lineage
+        full circle. It also describes the economy: gold buys resources, resources become crafted
+        goods, goods get traded, and gold circulates back into the world for others to earn.
+      </p>
+    </div>
+  </div>
+
+  {/* ── Highlights ── */}
+  <div class="row mb-4">
+    {
+      highlights.map((item) => (
+        <div class="col-md-6 mb-4">
+          <div class="card highlight-card">
+            <div class="card-body">
+              <h3 class="card-title">{item.title}</h3>
+              <hr />
+              <p class="card-text mb-0">{item.body}</p>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+
+  {/* ── Closing CTA ── */}
+  <div class="card mb-4">
+    <div class="card-body text-center py-5">
+      <h2 class="card-title mb-3">Come and break it for us</h2>
+      <p class="text-muted mb-4">
+        Pre-alpha is small on purpose. If you play it and tell us what went wrong, that is exactly
+        what we need right now.
+      </p>
+      <p class="mb-0"><a href={PLAY_URL} class="playbutton">Play at test.fcmud.world</a></p>
+    </div>
+  </div>
+</Base>

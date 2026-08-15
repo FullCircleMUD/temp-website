@@ -1,0 +1,15 @@
+{
+  "name": "fcm-temp-website",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Pre-alpha holding site for fcmud.world. Points players at the staging instance.",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^5.2.5"
+  }
+}

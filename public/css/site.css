@@ -1,0 +1,71 @@
+/* ============================================================
+   Holding-site base rules.
+
+   The game site gets these from Evennia's own website.css, which
+   ships with the Evennia package rather than the game repo. This
+   file supplies only the handful of rules fcm-dark.css layers on
+   top of. Colours, fonts and component styling all stay in
+   fcm-dark.css so the two sites cannot drift.
+   ============================================================ */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1 0 auto;
+}
+
+/* Brand logo in the navbar */
+.navbar-brand-logo {
+  height: 40px;
+  width: auto;
+}
+
+.navbar-brand .media-body {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.navbar-brand .media-body small {
+  font-size: 12px;
+}
+
+/* Footer — fcm-dark.css sets the colours, not the spacing */
+.footer {
+  flex-shrink: 0;
+  padding: 1.5rem 0;
+  margin-top: 3rem;
+}
+
+/* Hero wordmark, a size above the theme's h1 */
+.hero-title {
+  font-size: 44px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 575.98px) {
+  .hero-title {
+    font-size: 32px;
+  }
+}
+
+/* Status pill for the pre-alpha banner */
+.status-pill {
+  display: inline-block;
+  font-family: var(--fcm-font-heading);
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--fcm-gold);
+  border: 1px solid var(--fcm-gold);
+  border-radius: 999px;
+  padding: 4px 14px;
+}
+
+/* Highlight cards keep an even height when they sit side by side */
+.highlight-card {
+  height: 100%;
+}
