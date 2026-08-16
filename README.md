@@ -2,7 +2,7 @@
 
 The holding site for **fcmud.world** while the game is in pre-alpha. It explains what Full Circle
 MUD is, states plainly that the game runs on the staging instance and that asset import/export is
-off until beta, and sends players to `test.fcmud.world`.
+off until beta, and sends players to `staging.fcmud.world`.
 
 It is temporary. At beta, production moves to `fcmud.world` and this site is retired.
 
